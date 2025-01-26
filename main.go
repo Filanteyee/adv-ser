@@ -74,7 +74,7 @@ var (
 func initDB() {
 	dsn := os.Getenv("DATABASE_URL")
 	if dsn == "" {
-		dsn = "host=localhost user=postgres password=LUFFYtaroo111&&& dbname=SportLife port=5432 sslmode=disable"
+		dsn = "host=localhost user=postgres password=1234 dbname=sportlife port=5432 sslmode=disable"
 	}
 
 	var err error
@@ -167,7 +167,6 @@ func getBookings(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Ошибка сериализации JSON", http.StatusInternalServerError)
 	}
 }
-
 
 // Add JWT claims struct
 type Claims struct {
@@ -464,8 +463,8 @@ func handleGetBookings(w http.ResponseWriter, r *http.Request) {
 func sendEmailWithAttachment(to, subject, body, fileContent, fileName string) error {
 	smtpHost := "smtp.mail.ru"
 	smtpPort := "465"
-	username := "ploc91@mail.ru"
-	password := "t8W4VtwhnifanyLeSReD"
+	username := "filanteye@bk.ru"
+	password := "7wEt292x67tB0eTL1Grz"
 	from := username
 
 	// Boundary for separating email parts
@@ -912,7 +911,7 @@ func handleDeleteBooking(w http.ResponseWriter, r *http.Request) {
 func main() {
 	initDB()
 	configureLogger()
-	
+
 	mux := http.NewServeMux()
 	mux.HandleFunc("/auth", handleAuth)
 	// mux.HandleFunc("/auth", rateLimited(handleAuth))
