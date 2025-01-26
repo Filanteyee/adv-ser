@@ -464,7 +464,7 @@ func sendEmailWithAttachment(to, subject, body, fileContent, fileName string) er
 	smtpHost := "smtp.mail.ru"
 	smtpPort := "465"
 	username := "filanteye@bk.ru"
-	password := "7wEt292x67tB0eTL1Grz"
+	password := "dG1CdGvzuzGZagq8BK4P"
 	from := username
 
 	// Boundary for separating email parts
