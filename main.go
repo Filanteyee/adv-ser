@@ -318,7 +318,7 @@ func handleAuth(w http.ResponseWriter, r *http.Request) {
 		user.Active = false // User starts as inactive
 
 		// Create confirmation link
-		confirmationLink := fmt.Sprintf("http://localhost:8080/confirm?token=%s", confirmationToken)
+		confirmationLink := fmt.Sprintf("https://adv-ser.onrender.com/confirm?token=%s", confirmationToken)
 
 		// Send confirmation email
 		emailBody := fmt.Sprintf("Please confirm your email by clicking this link: %s", confirmationLink)
