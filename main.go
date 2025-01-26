@@ -74,7 +74,7 @@ var (
 func initDB() {
 	dsn := os.Getenv("DATABASE_URL")
 	if dsn == "" {
-		dsn = "host=localhost user=postgres password=1234 dbname=sportlife port=5432 sslmode=disable"
+		dsn = "host=dpg-cub695t6l47c739v3tgg-a user=nur password=YG6pVC4hHb3YO1RxWn9WN5Aeh9dW3I57 dbname=sportlife_ocyk port=5432 sslmode=disable"
 	}
 
 	var err error
